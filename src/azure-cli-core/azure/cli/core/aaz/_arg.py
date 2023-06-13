@@ -19,7 +19,7 @@ from ._field_type import AAZObjectType, AAZStrType, AAZIntType, AAZBoolType, AAZ
 from ._field_value import AAZObject
 from ._arg_fmt import AAZObjectArgFormat, AAZListArgFormat, AAZDictArgFormat, AAZFreeFormDictArgFormat, \
     AAZSubscriptionIdArgFormat, AAZResourceLocationArgFormat, AAZResourceIdArgFormat, AAZUuidFormat, AAZDateFormat, \
-    AAZTimeFormat, AAZDateTimeFormat, AAZDurationFormat, AAZFileArgTextFormat
+    AAZTimeFormat, AAZDateTimeFormat, AAZDurationFormat, AAZFileArgTextFormat, AAZIntArgFormat
 from .exceptions import AAZUnregisteredArg
 from ._prompt import AAZPromptInput
 
@@ -651,3 +651,32 @@ class AAZGenericUpdateRemoveArg(AAZGenericUpdateArg):
         class Action(AAZGenericUpdateAction):
             ACTION_NAME = "remove"
         return Action
+
+
+class AAZPaginationLimitArg(AAZIntArg):
+    def __init__(
+            self, options=("--page-size", ), arg_group="Pagination",
+            help="Total number of items to return in the command's output.",
+            **kwargs):
+        super().__init__(
+            options=options,
+            arg_group=arg_group,
+            help=help,
+            fmt=AAZIntArgFormat(
+                minimum=1,
+            ),
+            **kwargs,
+        )
+
+
+class AAZPaginationTokenArg(AAZStrArg):
+    def __init__(
+            self, options=("--next-token", ), arg_group="Pagination",
+            help="Token to specify where to start paginating.",
+            **kwargs):
+        super().__init__(
+            options=options,
+            arg_group=arg_group,
+            help=help,
+            **kwargs,
+        )
