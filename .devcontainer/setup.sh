@@ -6,8 +6,10 @@ git clone https://github.com/Azure/azure-rest-api-specs.git /workspaces/azure-re
 git clone https://github.com/Azure/aaz.git /workspaces/aaz
 
 # setup development environment
-pip install aaz-dev
 cd /workspaces
+python -m venv venv
+source ./venv/bin/active
+pip install aaz-dev
 azdev setup -c -r ./azure-cli-extensions
 
 # run codegen tool
