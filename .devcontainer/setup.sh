@@ -7,8 +7,7 @@ git clone https://github.com/Azure/aaz.git /workspaces/aaz
 
 # setup development environment
 cd /workspaces
-python -m venv venv
-source ./venv/bin/active
+python -m venv ./venv && source ./venv/bin/activate
 pip install aaz-dev
 azdev setup -c -r ./azure-cli-extensions
 
