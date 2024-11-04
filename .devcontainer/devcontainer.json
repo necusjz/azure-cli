@@ -1,4 +1,5 @@
 {
   "image": "mcr.microsoft.com/devcontainers/python:3.12",
-  "postCreateCommand": "chmod +x .devcontainer/setup.sh && .devcontainer/setup.sh"
+  "workspaceFolder": "/workspaces",
+  "postCreateCommand": "bash ./azure-cli/.devcontainer/setup.sh"
 }
