@@ -1,5 +1,5 @@
 {
   "image": "mcr.microsoft.com/devcontainers/python:3.12",
   "workspaceFolder": "/workspaces",
-  "initializeCommand": "bash ./azure-cli/.devcontainer/setup.sh"
+  "onCreateCommand": "bash ./azure-cli/.devcontainer/setup.sh"
 }
