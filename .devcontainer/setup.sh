@@ -10,5 +10,5 @@ python -m venv ./venv && source ./venv/bin/activate
 pip install aaz-dev
 azdev setup -c -r ./azure-cli-extensions
 
-# run codegen tool
-#aaz-dev run -c ./azure-cli -e ./azure-cli-extensions -s ./azure-rest-api-specs -a ./aaz
+# activate venv by default
+echo 'source ./venv/bin/activate' >> ~/.bashrc

@@ -1,6 +1,5 @@
 {
   "image": "mcr.microsoft.com/devcontainers/python:3.12",
   "workspaceFolder": "/workspaces",
-  "initializeCommand": "echo 'source $(pwd)/.venv/bin/activate' >> ~/.bashrc",
-  "postCreateCommand": "bash ./azure-cli/.devcontainer/setup.sh"
+  "initializeCommand": "bash ./azure-cli/.devcontainer/setup.sh"
 }
