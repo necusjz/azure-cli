@@ -11,4 +11,4 @@ pip install aaz-dev
 azdev setup -c -r ./azure-cli-extensions
 
 # activate venv by default
-echo 'source ./venv/bin/activate' >> ~/.bashrc
+echo 'source /workspaces/venv/bin/activate' >> ~/.bashrc
