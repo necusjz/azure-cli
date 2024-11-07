@@ -2,6 +2,16 @@
   "name": "Azure CLI Dev Container",
   "image": "mcr.microsoft.com/devcontainers/python:3.12",
   "workspaceFolder": "/workspaces",
-  "onCreateCommand": "python -m venv ./venv && echo 'source /workspaces/venv/bin/activate' >> ~/.bashrc",
-  "postCreateCommand": "bash ./azure-cli/.devcontainer/setup.sh"
+  "onCreateCommand": "python -m venv ./venv",
+  "postCreateCommand": "bash ./azure-cli/.devcontainer/setup.sh",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python"
+      ],
+      "settings": {
+        "python.defaultInterpreterPath": "/workspaces/venv/bin/python"
+      }
+    }
+  }
 }
