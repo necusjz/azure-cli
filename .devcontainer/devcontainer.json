@@ -1,13 +1,8 @@
 {
   "name": "Azure CLI Dev Container",
-  "image": "mcr.microsoft.com/devcontainers/base:dev-ubuntu-22.04",
-  "features": {
-    "gh": "latest",
-    "python": "3.12"
-  },
+  "image": "mcr.microsoft.com/devcontainers/python:3.12",
   "workspaceFolder": "/workspaces",
-  "onCreateCommand": "gh auth login",
-  "updateContentCommand": "python -m venv ./venv",
+  "onCreateCommand": "python -m venv ./venv",
   "postCreateCommand": "bash ./azure-cli/.devcontainer/setup.sh",
   "customizations": {
     "vscode": {
