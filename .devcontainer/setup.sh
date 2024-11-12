@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# setup github cli
+gh auth login
+
 # clone required repositories
 gh repo clone https://github.com/Azure/azure-cli-extensions.git ./azure-cli-extensions
 gh repo clone https://github.com/Azure/azure-rest-api-specs.git ./azure-rest-api-specs

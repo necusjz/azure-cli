@@ -6,7 +6,6 @@
   },
   "workspaceFolder": "/workspaces",
   "onCreateCommand": "python -m venv ./venv",
-  "updateContentCommand": "gh auth login",
   "postCreateCommand": "bash ./azure-cli/.devcontainer/setup.sh",
   "customizations": {
     "vscode": {
