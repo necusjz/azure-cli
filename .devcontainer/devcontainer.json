@@ -1,9 +1,8 @@
 {
   "name": "Azure CLI Dev Container",
-  "image": "mcr.microsoft.com/devcontainers/base:ubuntu:22.04",
+  "image": "mcr.microsoft.com/devcontainers/python:3.12",
   "features": {
-    "gh": "latest",
-    "python": "3.12"
+    "gh": "latest"
   },
   "workspaceFolder": "/workspaces",
   "onCreateCommand": "gh auth login",
