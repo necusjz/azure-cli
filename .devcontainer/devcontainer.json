@@ -1,8 +1,12 @@
 {
   "name": "Azure CLI Dev Container",
   "image": "mcr.microsoft.com/devcontainers/python:3.12",
+  "features": {
+    "ghcr.io/devcontainers/features/github-cli:1": {}
+  },
   "workspaceFolder": "/workspaces",
   "onCreateCommand": "python -m venv ./venv",
+  "updateContentCommand": "gh auth login",
   "postCreateCommand": "bash ./azure-cli/.devcontainer/setup.sh",
   "customizations": {
     "vscode": {
