@@ -9,14 +9,14 @@ setup_repo() {
     local DIR_NAME="$1"
     local REPO="Azure/$DIR_NAME"
 
-    if [ -d "$DIR_NAME" ]; then
-        echo -e "\n${YELLOW}Pulling the latest changes from upstream...${NC}"
+    if [ -d "/workspaces/$DIR_NAME" ]; then
+        echo -e "\n${YELLOW}($DIR_NAME) Pulling the latest changes from upstream...${NC}"
         cd "$DIR_NAME"
         gh repo sync --source "$REPO"
-        cd /worksapces
+        cd /workspaces
     else
         echo
-        echo -e "\n${GREEN}Forking and cloning the repository...${NC}"
+        echo -e "\n${GREEN}($DIR_NAME) Forking and cloning the repository...${NC}"
         gh repo fork "$REPO" --clone=true
     fi
 }
