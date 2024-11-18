@@ -5,8 +5,8 @@
     "ghcr.io/devcontainers/features/github-cli:1": {}
   },
   "workspaceFolder": "/workspaces",
-  "onCreateCommand": "python -m venv ./venv",
-  "postCreateCommand": "cat ./azure-cli/.devcontainer/login.sh >> ~/.bashrc",
+  "onCreateCommand": "python -m venv venv",
+  "postCreateCommand": "cat azure-cli/.devcontainer/login.sh >> ~/.bashrc && cp azure-cli/.devcontainer/setup.sh setup.sh && chmod +x setup.sh",
   "customizations": {
     "vscode": {
       "extensions": [
