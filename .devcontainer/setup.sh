@@ -7,22 +7,24 @@ NC="\033[0m"  # no color
 
 setup_repo() {
     local DIR_NAME="$1"
+    local DIR_PATH="/workspaces/$DIR_NAME"
     local REPO="Azure/$DIR_NAME"
 
-    if [ -d "/workspaces/$DIR_NAME" ]; then
+    if [ -d "$DIR_PATH" ]; then
         echo -e "\n${YELLOW}($DIR_NAME) Pulling the latest changes from upstream...${NC}"
-        cd "$DIR_NAME"
+        cd "$DIR_PATH"
         gh repo sync --source "$REPO"
         cd /workspaces
     else
-        echo
         echo -e "\n${GREEN}($DIR_NAME) Forking and cloning the repository...${NC}"
+        cd /workspaces
         gh repo fork "$REPO" --clone=true
     fi
 }
 
 SECONDS=0
 
+source /workspaces/venv/bin/activate  # activate venv
 pip install aaz-dev
 
 # azdev repositories
@@ -38,4 +40,4 @@ setup_repo "azure-rest-api-specs-pr"
 
 ELAPSED_TIME=$SECONDS
 echo -e "\n${YELLOW}Elapsed time: $((ELAPSED_TIME / 60)) min $((ELAPSED_TIME % 60)) sec.${NC}"
-echo -e "${GREEN}Finished setup! Please launch the codegen tool via \`aaz-dev run -c azure-cli -e azure-cli-extensions -s azure-rest-api-specs -a aaz\`${NC}\n"
+echo -e "${GREEN}Finished setup! Please launch the codegen tool via \`aaz-dev run -c azure-cli -e azure-cli-extensions -s azure-rest-api-specs -a aaz\`.${NC}\n"

@@ -6,7 +6,7 @@
   },
   "workspaceFolder": "/workspaces",
   "onCreateCommand": "python -m venv venv",
-  "postCreateCommand": "cat azure-cli/.devcontainer/login.sh >> ~/.bashrc && cp azure-cli/.devcontainer/setup.sh setup.sh && chmod +x setup.sh && echo \\033[0;32mRun `./setup` to setup the dev environment.\\n\\033[0m",
+  "postCreateCommand": "cat azure-cli/.devcontainer/login.sh >> ~/.bashrc && cp azure-cli/.devcontainer/setup.sh setup.sh && chmod +x setup.sh",
   "customizations": {
     "vscode": {
       "extensions": [
