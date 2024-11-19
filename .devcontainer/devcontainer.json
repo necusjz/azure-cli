@@ -6,14 +6,15 @@
   },
   "workspaceFolder": "/workspaces",
   "onCreateCommand": "python -m venv venv",
-  "postCreateCommand": "cat azure-cli/.devcontainer/login.sh >> ~/.bashrc && cp azure-cli/.devcontainer/setup.sh setup.sh && chmod +x setup.sh",
+  "postCreateCommand": "cat azure-cli/.devcontainer/login.sh >> ~/.bashrc && cp azure-cli/.devcontainer/setup.sh easy_setup.sh && chmod +x easy_setup.sh",
   "customizations": {
     "vscode": {
       "extensions": [
         "ms-python.python"
       ],
       "settings": {
-        "python.defaultInterpreterPath": "/workspaces/venv/bin/python"
+        "python.defaultInterpreterPath": "/workspaces/venv/bin/python",
+        "python.terminal.activateEnvInCurrentTerminal": true
       }
     }
   }

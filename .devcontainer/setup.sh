@@ -24,13 +24,13 @@ setup_repo() {
 
 SECONDS=0
 
-source /workspaces/venv/bin/activate  # activate venv
 pip install aaz-dev
 
 # azdev repositories
 setup_repo "azure-cli"
 setup_repo "azure-cli-extensions"
 
+. /workspaces/venv/bin/activate
 azdev setup -c -r ./azure-cli-extensions
 
 # aaz-dev repositories
