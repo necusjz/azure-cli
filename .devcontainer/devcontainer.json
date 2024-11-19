@@ -7,6 +7,11 @@
   "workspaceFolder": "/workspaces",
   "onCreateCommand": "python -m venv venv",
   "postCreateCommand": "cat azure-cli/.devcontainer/login.sh >> ~/.bashrc && cp azure-cli/.devcontainer/setup.sh easy_setup.sh && chmod +x easy_setup.sh",
+  "hostRequirements": {
+    "cpus": 16,
+    "memory": "64gb",
+    "storage": "128gb"
+  },
   "customizations": {
     "vscode": {
       "extensions": [
