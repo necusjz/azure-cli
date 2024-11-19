@@ -11,11 +11,7 @@
     "vscode": {
       "extensions": [
         "ms-python.python"
-      ],
-      "settings": {
-        "python.defaultInterpreterPath": "/workspaces/venv/bin/python",
-        "python.terminal.activateEnvInCurrentTerminal": true
-      }
+      ]
     }
   }
 }

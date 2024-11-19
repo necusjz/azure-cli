@@ -30,7 +30,6 @@ pip install aaz-dev
 setup_repo "azure-cli"
 setup_repo "azure-cli-extensions"
 
-. /workspaces/venv/bin/activate
 azdev setup -c -r ./azure-cli-extensions
 
 # aaz-dev repositories
