@@ -8,3 +8,16 @@
 # pylint: skip-file
 # flake8: noqa
 
+from azure.cli.core.aaz import *
+
+
+@register_command_group(
+    "container-registry registry identity",
+)
+class __CMDGroup(AAZCommandGroup):
+    """container-registry registry identity
+    """
+    pass
+
+
+__all__ = ["__CMDGroup"]
